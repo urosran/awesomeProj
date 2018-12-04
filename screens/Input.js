@@ -5,6 +5,7 @@ import React from 'react';
 import { View, Text, AsyncStorage, FlatList, List } from 'react-native';
 import { fromJS } from 'immutable';
 import { ScrollView } from 'react-native-gesture-handler';
+import WhereAmI from './whereAmI';
 
 
 // import styles from './styles';
@@ -73,7 +74,7 @@ class Input extends React.Component{
                     onChangeText={v => {this.data = this.data.set('value', v);}}
                 />
                 
-                <Paragraph>Current location: beograd</Paragraph>
+                <WhereAmI/>
 
                 </Card.Content>
                 
@@ -90,18 +91,17 @@ class Input extends React.Component{
                             value
                         }))}
                         renderItem={({ item: { value, key } }) => (
-                            
+
                          <Text> 
-                            u:  {key} 
-                            z: {value}
-                         
+                            Name:  {key} {"\n"}
+                            Last Name: {value}
                          </Text> 
                         //  <Text> z:  {value} </Text> 
-
-                            
-                            
+                        
+                        
+                        
                         )}
-                    />
+                     /> 
             </View>
          </View>
         )
