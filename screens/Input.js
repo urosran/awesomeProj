@@ -84,7 +84,7 @@ class Input extends React.Component{
                     <Button onPress={console.log("FUCK OFF")}>Cancel</Button>
                 </Card.Actions>
             </Card>
-            <View style={styles.list}>
+            <View>
                     <FlatList                
                         data={source.map(([key, value]) => ({
                             key: key.toString(),
@@ -96,10 +96,7 @@ class Input extends React.Component{
                             Name:  {key} {"\n"}
                             Last Name: {value}
                          </Text> 
-                        //  <Text> z:  {value} </Text> 
-                        
-                        
-                        
+                        //  <Text> z:  {value} </Text>
                         )}
                      /> 
             </View>
